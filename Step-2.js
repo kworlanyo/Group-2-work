@@ -220,6 +220,8 @@ console.log(manager1.addWorker(worker1));
 console.log(manager1.branchWorker);
 
 console.log(manager1.removeWorker("Worlanyo"));
+// console.log(manager2.removeWorker);
+// console.log(manager3.removeWorker);
 
 // * Task 1.2
 manager1.addWorker(worker2);
