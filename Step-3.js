@@ -371,6 +371,13 @@ console.log(order1); // Order { quantity: 3, name: 'Americano' }
 console.log(cafe1.getOrder(order1)); // 12 euros, please
 console.log(cafe1.processOrder()); // 3 Americano ready. be careful, it's hot.
 
+// * Task 3.2
+    console.log(order1);
+    console.log(order2);
+    
+    // * Task 3.3
+    console.log(getOrder("Americano"));
+
 // class Order {
 //     constructor(name, quantity) {
 //         this.name = name;
