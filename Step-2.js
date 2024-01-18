@@ -149,7 +149,7 @@ class Manager extends Worker {
 //       return `${name} is not found in the branchWorkers array`;
 //     }
   }
-}
+/* } */
 
 class Menu {
   constructor(type, name, price, isWarm) {
