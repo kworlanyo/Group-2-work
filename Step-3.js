@@ -13,8 +13,4 @@ class Cafe {
         this.orderArray = [];
     }
 
-    getOrder(order) {
-        this.orderArray.push(order);
-        const sum
-    }
 }
