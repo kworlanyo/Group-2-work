@@ -1,53 +1,51 @@
 class Cafe {
-//     constructor(branchId, name, city, sellsFood = false) {
-//       this.branchId = branchId;
-//       this.name = name;
-//       this.city = city;
-//       this.sellsFood = sellsFood;
-//       this.menu = [];
-//       this.employee = [];
-//       this.order = [];
-//     }
-//     addManager(manager1){
-//         if(!this.employee.includes(manager1)){
-//             this.employee.push(manager1);
-//             return `${this.employee[0].name} is now the manager for ${this.name}`
-//         }
+  //     constructor(branchId, name, city, sellsFood = false) {
+  //       this.branchId = branchId;
+  //       this.name = name;
+  //       this.city = city;
+  //       this.sellsFood = sellsFood;
+  //       this.menu = [];
+  //       this.employee = [];
+  //       this.order = [];
+  //     }
+  //     addManager(manager1){
+  //         if(!this.employee.includes(manager1)){
+  //             this.employee.push(manager1);
+  //             return `${this.employee[0].name} is now the manager for ${this.name}`
+  //         }
 
-//     }
-//     addEmployee(worker1){
-//         if(!this.employee.includes(worker1)){
-//             this.employee.push(worker1);
-//             return `Manager: ${this.employee[0].name} Workers: ${this.employee[1].name}, ${this.employee[1].position}`
-//         }
-//     }
-//   }
-  
-  
-//   class Manager extends Worker {
-//     constructor(name, branchID) {
-//       super(name, "manager");
-//       this.branchID = branchID;
-//       this.branchWorker = [];
-//     }
-//     addWorker(name){
-//         if(!this.branchWorker.includes(name)){
-//             this.branchWorker.push(name);
-//             return `${name} is added.`
-//         }
-        
-//   }
-//   removeWorker(name){
-//     if(this.branchWorker.includes(name)){
-//         this.branchWorker.pop(name);
-//         return `${name} is removed. Current workers: ${this.name}`
-//     }
+  //     }
+  //     addEmployee(worker1){
+  //         if(!this.employee.includes(worker1)){
+  //             this.employee.push(worker1);
+  //             return `Manager: ${this.employee[0].name} Workers: ${this.employee[1].name}, ${this.employee[1].position}`
+  //         }
+  //     }
+  //   }
 
-//   }
-// }
-  
+  //   class Manager extends Worker {
+  //     constructor(name, branchID) {
+  //       super(name, "manager");
+  //       this.branchID = branchID;
+  //       this.branchWorker = [];
+  //     }
+  //     addWorker(name){
+  //         if(!this.branchWorker.includes(name)){
+  //             this.branchWorker.push(name);
+  //             return `${name} is added.`
+  //         }
 
-//   }
+  //   }
+  //   removeWorker(name){
+  //     if(this.branchWorker.includes(name)){
+  //         this.branchWorker.pop(name);
+  //         return `${name} is removed. Current workers: ${this.name}`
+  //     }
+
+  //   }
+  // }
+
+  //   }
 
   constructor(branchId, name, city, sellsFood = false) {
     this.branchId = branchId;
@@ -85,30 +83,30 @@ class Cafe {
     let menuLeft = this.menu.map((obj) => obj.name);
     return `${menuToDelete.name} is removed. Current menu available: ${menuLeft.join(", ")}`;
 
-//     const manager = this.employee[0];
-//     const workers = manager.branchWorker;
+    //     const manager = this.employee[0];
+    //     const workers = manager.branchWorker;
 
-//     this.employee = [manager, ...workers];
-//     return `manager: ${manager.name}, workers: ${workers.map(worker => `${worker.name}(${worker.position})`).join(', ')}`;
-//   }
+    //     this.employee = [manager, ...workers];
+    //     return `manager: ${manager.name}, workers: ${workers.map(worker => `${worker.name}(${worker.position})`).join(', ')}`;
+    //   }
 
-//   addMenu(menu) {
-//     if (!this.sellsFood && menu.type === 'food') {
-//       return `${this.name} doesn't sell food.`;
-//     }
-//     this.menu.push(menu);
-//     return `${menu.name} added`;
-//   }
+    //   addMenu(menu) {
+    //     if (!this.sellsFood && menu.type === 'food') {
+    //       return `${this.name} doesn't sell food.`;
+    //     }
+    //     this.menu.push(menu);
+    //     return `${menu.name} added`;
+    //   }
 
-//   removeMenu(menu) {
-//     const removedIndex = this.menu.findIndex(m => m.name === menu.name);
-//     if (removedIndex !== -1) {
-//       const removedMenu = this.menu.splice(removedIndex, 1)[0];
-//       return `${removedMenu.name} is removed. current menu available: ${this.menu.map(m => m.name).join(', ') || 'None'}`;
-//       // Same issue as in the removeWorker method below... without the extension " || 'None' " it would return "undefined" (or nothing at all) if there is no menu left in the array...
-//     } else {
-//       return `${menu.name} is not found in the menu array`;
-//     }
+    //   removeMenu(menu) {
+    //     const removedIndex = this.menu.findIndex(m => m.name === menu.name);
+    //     if (removedIndex !== -1) {
+    //       const removedMenu = this.menu.splice(removedIndex, 1)[0];
+    //       return `${removedMenu.name} is removed. current menu available: ${this.menu.map(m => m.name).join(', ') || 'None'}`;
+    //       // Same issue as in the removeWorker method below... without the extension " || 'None' " it would return "undefined" (or nothing at all) if there is no menu left in the array...
+    //     } else {
+    //       return `${menu.name} is not found in the menu array`;
+    //     }
   }
 }
 
@@ -137,10 +135,19 @@ class Manager extends Worker {
     return `${worker} is removed. Current workers: ${currentWorkers.join(", ")}`;
   }
 
-//   removeWorker(name) {
-//     const removedWorkerIndex = this.branchWorker.findIndex(worker => worker.name === name);
+  //   removeWorker(name) {
+  //     const removedWorkerIndex = this.branchWorker.findIndex(worker => worker.name === name);
 
-//     if (removedWorkerIndex !== -1) {
+  //     if (removedWorkerIndex !== -1) {
+
+
+  //       const removedWorker = this.branchWorker.splice(removedWorkerIndex, 1)[0];
+  //       return `${removedWorker.name} is now removed. current workers: ${this.branchWorker.map(worker => worker.name).join(", ") || 'None'}`;
+  //       // Wow... that took me some time... without tne extension " || 'None' " it would return "undefined" if there is no worker left in the array...
+  //     } else {
+  //       return `${name} is not found in the branchWorkers array`;
+  //     }
+}
 
 //       const removedWorker = this.branchWorker.splice(removedWorkerIndex, 1)[0];
 //       return `${removedWorker.name} is now removed. current workers: ${this.branchWorker.map(worker => worker.name).join(", ") || 'None'}`;
@@ -150,6 +157,7 @@ class Manager extends Worker {
 //     }
   }
 /* } */
+
 
 class Menu {
   constructor(type, name, price, isWarm) {
