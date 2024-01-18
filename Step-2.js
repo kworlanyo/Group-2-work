@@ -140,6 +140,7 @@ class Manager extends Worker {
 
   //     if (removedWorkerIndex !== -1) {
 
+
   //       const removedWorker = this.branchWorker.splice(removedWorkerIndex, 1)[0];
   //       return `${removedWorker.name} is now removed. current workers: ${this.branchWorker.map(worker => worker.name).join(", ") || 'None'}`;
   //       // Wow... that took me some time... without tne extension " || 'None' " it would return "undefined" if there is no worker left in the array...
@@ -147,6 +148,16 @@ class Manager extends Worker {
   //       return `${name} is not found in the branchWorkers array`;
   //     }
 }
+
+//       const removedWorker = this.branchWorker.splice(removedWorkerIndex, 1)[0];
+//       return `${removedWorker.name} is now removed. current workers: ${this.branchWorker.map(worker => worker.name).join(", ") || 'None'}`;
+//       // Wow... that took me some time... without tne extension " || 'None' " it would return "undefined" if there is no worker left in the array...
+//     } else {
+//       return `${name} is not found in the branchWorkers array`;
+//     }
+  }
+/* } */
+
 
 class Menu {
   constructor(type, name, price, isWarm) {

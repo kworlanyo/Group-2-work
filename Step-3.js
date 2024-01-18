@@ -297,3 +297,20 @@ console.log(order1); // Order { quantity: 3, name: 'Americano' }
 
 console.log(cafe1.getOrder(order1)); // 12 euros, please
 console.log(cafe1.processOrder()); // 3 Americano ready. be careful, it's hot.
+
+// class Order {
+//     constructor(name, quantity) {
+//         this.name = name;
+//         this.quantity = quantity;
+//     }
+// }
+
+// const order1 = new Order("Americano", 3);
+// console.log(order1) // Order { quantity: 3, name: 'Americano' }
+
+// class Cafe {
+//     constructor() {
+//         this.orderArray = [];
+//     }
+
+// }
