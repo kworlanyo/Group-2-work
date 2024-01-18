@@ -118,20 +118,6 @@ class Cafe {
   }
 }
 
-const menu1 = new Menu("drink", "Americano", 4.5, true);
-const menu2 = new Menu("drink", "Cappuccino", 4.5, true);
-
-cafe1.menu.push(menu1);
-cafe1.menu.push(menu1, menu2);
-
-console.log(cafe1.getOrder(order1)); // 12 euros, please
-console.log(cafe1.processOrder()); // 3 Americano ready. be careful, it's hot.
-
-const order2 = new MultiOrder({ name: "Americano", quantity: 3 }, { name: "Cappuccino", quantity: 2 });
-
-console.log(cafe1.getMultiOrder(order2));
-console.log(cafe1.processMultiOrder());
-
 class Menu {
   constructor(type, name, price, isWarm) {
     this.type = type;
@@ -184,6 +170,9 @@ const cafe1 = new Cafe(1, "E08 Kreuzberg", "Berlin", false);
 const cafe2 = new Cafe(2, "E08 Altona", "Hamburg", true);
 const cafe3 = new Cafe(3, "E08 Mitte", "Leipzig", true);
 
+const menu1 = new Menu("drink", "Americano", 4.5, true);
+const menu2 = new Menu("drink", "Cappuccino", 4.5, true);
+
 const worker1 = new Worker("Worlanyo", "barista");
 const worker2 = new Worker("Ognjen", "barista");
 const worker3 = new Worker("Lucas", "cashier");
@@ -199,6 +188,24 @@ const menu3 = new Menu("food", "Potato Chips", 8.5, true);
 const menu4 = new Menu("food", "Ice Cream", 3.5, false);
 const menu5 = new Menu("food", "Okonomiyaki", 13.5, true);
 const menu6 = new Menu("food", "Ham & Eggs", 12.5, true);
+const drink1 = new Menu("drink", "Americano", 5.5, true);
+const food2 = new Menu("food", "Caesar Salad", 11.5, false);
+const drink2 = new Menu("drink", "Latte", 4.5, true);
+const food3 = new Menu("food", "Sushi Roll", 15.5, false);
+const drink3 = new Menu("drink", "Espresso", 3.5, true);
+const order1 = new Order(drink1, 3);
+console.log(order1); // Order { quantity: 3, name: 'Americano' }
+
+cafe1.menu.push(menu1);
+cafe1.menu.push(menu1, menu2);
+
+console.log(cafe1.getOrder(order1)); // 12 euros, please
+console.log(cafe1.processOrder()); // 3 Americano ready. be careful, it's hot.
+
+const order2 = new MultiOrder({ name: "Americano", quantity: 3 }, { name: "Cappuccino", quantity: 2 });
+
+console.log(cafe1.getMultiOrder(order2));
+console.log(cafe1.processMultiOrder());
 
 // * Task 1.1
 console.log(manager1.addWorker(worker1));
@@ -222,7 +229,7 @@ console.log(cafe1.addManager(manager1));
 console.log(cafe1.addEmployee());
 
 console.log(cafe1.addMenu(menu1));
-const drink1 = new Menu("drink", "Americano", 5.5, true);
+
 console.log(cafe1.addMenu(drink1));
 
 console.log(cafe1.removeMenu(drink1));
@@ -232,17 +239,11 @@ cafe1.addMenu(drink1);
 console.log(cafe2.addManager(manager2));
 console.log(cafe2.addEmployee());
 
-const food2 = new Menu("food", "Caesar Salad", 11.5, false);
-const drink2 = new Menu("drink", "Latte", 4.5, true);
-
 console.log(cafe2.addMenu(food2));
 console.log(cafe2.addMenu(drink2));
 
 console.log(cafe3.addManager(manager3));
 console.log(cafe3.addEmployee());
-
-const food3 = new Menu("food", "Sushi Roll", 15.5, false);
-const drink3 = new Menu("drink", "Espresso", 3.5, true);
 
 console.log(cafe3.addMenu(food3));
 console.log(cafe3.addMenu(drink3));
@@ -254,9 +255,6 @@ cafe1.addMenu(drink1);
 // * cafe1
 console.log(cafe1);
 
-const order1 = new Order(drink1, 3);
-console.log(order1); // Order { quantity: 3, name: 'Americano' }
-
 console.log(cafe1.getOrder(order1)); // 12 euros, please
 console.log(cafe1.processOrder()); // 3 Americano ready. be careful, it's hot.
 
@@ -265,4 +263,4 @@ console.log(order1);
 console.log(order2);
 
 // * Task 3.3
-console.log(getOrder("Americano"));
+// console.log(getOrder("Americano"));
