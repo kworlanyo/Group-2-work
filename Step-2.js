@@ -1,4 +1,54 @@
 class Cafe {
+//     constructor(branchId, name, city, sellsFood = false) {
+//       this.branchId = branchId;
+//       this.name = name;
+//       this.city = city;
+//       this.sellsFood = sellsFood;
+//       this.menu = [];
+//       this.employee = [];
+//       this.order = [];
+//     }
+//     addManager(manager1){
+//         if(!this.employee.includes(manager1)){
+//             this.employee.push(manager1);
+//             return `${this.employee[0].name} is now the manager for ${this.name}`
+//         }
+
+//     }
+//     addEmployee(worker1){
+//         if(!this.employee.includes(worker1)){
+//             this.employee.push(worker1);
+//             return `Manager: ${this.employee[0].name} Workers: ${this.employee[1].name}, ${this.employee[1].position}`
+//         }
+//     }
+//   }
+  
+  
+//   class Manager extends Worker {
+//     constructor(name, branchID) {
+//       super(name, "manager");
+//       this.branchID = branchID;
+//       this.branchWorker = [];
+//     }
+//     addWorker(name){
+//         if(!this.branchWorker.includes(name)){
+//             this.branchWorker.push(name);
+//             return `${name} is added.`
+//         }
+        
+//   }
+//   removeWorker(name){
+//     if(this.branchWorker.includes(name)){
+//         this.branchWorker.pop(name);
+//         return `${name} is removed. Current workers: ${this.name}`
+//     }
+
+//   }
+// }
+  
+
+//   }
+
   constructor(branchId, name, city, sellsFood = false) {
     this.branchId = branchId;
     this.name = name;
