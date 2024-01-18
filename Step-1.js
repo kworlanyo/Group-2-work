@@ -10,20 +10,20 @@ class Cafe {
   }
 }
 
-// Shinhee's example:
-const cafe1 = new Cafe(1, "E08 Kreuzberg", "Berlin", false);
-console.log(cafe1);
+class Worker {
+  constructor(name, position) {
+    this.name = name;
+    this.position = position;
+  }
+}
 
-// Output is indeed:
-// Cafe {
-//     branchId: 1,
-//     name: 'E08 Kreuzberg',
-//     city: 'Berlin',
-//     sellsFood: false,
-//     menu: [],
-//     employee: [],
-//     order: []
-//   }
+class Manager extends Worker {
+  constructor(name, branchID) {
+    super(name, "manager");
+    this.branchID = branchID;
+    this.branchWorker = [];
+  }
+}
 
 class Menu {
   constructor(type, name, price, isWarm) {
@@ -34,44 +34,24 @@ class Menu {
   }
 }
 
-const food1 = new Menu("food", "Hot Sandwich", 12.5, true);
-console.log(food1);
-
-
-class Worker {
-  constructor(name, position) {
-    this.name = name;
-    this.position = position;
-    
-  }
-}
+const cafe1 = new Cafe(1, "E08 Kreuzberg", "Berlin", false);
+const cafe2 = new Cafe(2, "E08 Altona", "Hamburg", true);
+const cafe3 = new Cafe(3, "E08 Mitte", "Leipzig", true);
 
 const worker1 = new Worker("Worlanyo", "barista");
 const worker2 = new Worker("Ognjen", "barista");
 const worker3 = new Worker("Lucas", "cashier");
 const worker4 = new Worker("Tomislav", "cashier");
-
-console.log(worker1);
-console.log(worker2);
-console.log(worker3);
-console.log(worker4);
-
-
-
-class Worker {
-  constructor(name, position) {
-      this.name = name;
-      this.position = position;
-  }
-}
-
-class Manager extends Worker {
-  constructor(name, branchID) {
-      super (name,"manager");
-      this.branchID = branchID;
-      this.branchWorker = [];
-  }
-}
+const worker5 = new Worker("Shinhee", "barista");
+const worker6 = new Worker("Jamie", "cashier");
 
 const manager1 = new Manager("Tina", 1);
-console.log(manager1);
+const manager2 = new Manager("Poli", 2);
+const manager3 = new Manager("Zhanna", 3);
+
+const menu1 = new Menu("food", "Hot Sandwich", 12.5, true);
+const menu2 = new Menu("food", "Cream Salad", 10.5, false);
+const menu3 = new Menu("food", "Potato Chips", 8.5, true);
+const menu4 = new Menu("food", "Ice Cream", 3.5, false);
+const menu5 = new Menu("food", "Okonomiyaki", 13.5, true);
+const menu6 = new Menu("food", "Ham & Eggs", 12.5, true);
